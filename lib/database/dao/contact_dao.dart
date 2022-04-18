@@ -26,6 +26,26 @@ class ContactDao {
     return contactMap;
   }
 
+  Future<int> update(Contact contact) async {
+    final Database db = await getDatabase();
+    final Map<String, dynamic> contactMap = _toMap(contact);
+    return db.update(
+      _tableName,
+      contactMap,
+      where: 'id = ?',
+      whereArgs: [contact.id],
+    );
+  }
+
+  Future<int> delete(Contact contact) async {
+    final Database db = await getDatabase();
+    return db.delete(
+      _tableName,
+      where: 'id = ?',
+      whereArgs: [contact.id],
+    );
+  }
+
   Future<List<Contact>> findAll() async {
     final Database db = await getDatabase();
     final List<Map<String, dynamic>> result = await db.query(_tableName);
