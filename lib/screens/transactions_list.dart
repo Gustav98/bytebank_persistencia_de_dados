@@ -24,8 +24,7 @@ class TransactionsList extends StatelessWidget {
               break;
             case ConnectionState.done:
               if (snapshot.hasData) {
-                final List<Transaction> transactions =
-                    (snapshot.data as List<Transaction>);
+                final List<Transaction> transactions = snapshot.data ?? [];
                 if (transactions.isNotEmpty) {
                   return ListView.builder(
                     itemBuilder: (context, index) {

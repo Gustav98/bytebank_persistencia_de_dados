@@ -16,12 +16,13 @@ class Dashboard extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.all(8.0),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.5,
+            width: MediaQuery.of(context).size.width,
             child: Image.asset('images/bytebank_logo.png'),
           ),
           SizedBox(
-            height: 120,
+            height: MediaQuery.of(context).size.height * 0.19,
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: [
@@ -70,7 +71,7 @@ class _FeatureItem extends StatelessWidget {
           onTap: () => onClick(),
           child: Container(
             padding: EdgeInsets.all(8.0),
-            width: 150,
+            width: MediaQuery.of(context).size.width * 0.4,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -83,9 +84,9 @@ class _FeatureItem extends StatelessWidget {
                 Text(
                   name,
                   style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16.0,
-                      fontWeight: FontWeight.bold),
+                    color: Colors.white,
+                    fontSize: 16.0,
+                  ),
                 ),
               ],
             ),

@@ -23,15 +23,12 @@ class _ContactFormState extends State<ContactForm> {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.only(top: 8.0),
-              child: TextField(
-                controller: _nameController,
-                decoration: const InputDecoration(
-                  labelText: 'Full Name',
-                ),
-                style: const TextStyle(fontSize: 24.0),
+            TextField(
+              controller: _nameController,
+              decoration: const InputDecoration(
+                labelText: 'Full Name',
               ),
+              style: const TextStyle(fontSize: 24.0),
             ),
             Padding(
               padding: const EdgeInsets.only(top: 8.0),
@@ -55,9 +52,7 @@ class _ContactFormState extends State<ContactForm> {
                     final int? accountNumber =
                         int.tryParse(_accountNumberController.text);
                     final Contact newContact = Contact(name, accountNumber!, 0);
-                    _dao
-                        .save(newContact)
-                        .then((id) => Navigator.pop(context, newContact));
+                    _dao.save(newContact).then((id) => Navigator.pop(context));
                   },
                 ),
               ),
