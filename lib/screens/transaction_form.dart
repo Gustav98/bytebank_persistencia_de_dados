@@ -1,5 +1,5 @@
-import 'package:bytebank_flutter2/http/webclients/transaction_webclient.dart';
 import 'package:flutter/material.dart';
+import '../http/webclients/transaction_webclient.dart';
 import '../models/contact.dart';
 import '../models/transaction.dart';
 
