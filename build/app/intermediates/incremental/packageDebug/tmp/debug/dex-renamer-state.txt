@@ -1,0 +1,4 @@
+#Tue Apr 26 08:06:22 BRT 2022
+base.0=C\:\\Users\\T806572\\Documents\\estudos-flutter\\bytebank_flutter2\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
