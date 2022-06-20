@@ -14,7 +14,10 @@ class Progress extends StatelessWidget {
           CircularProgressIndicator(),
           Padding(
             padding: EdgeInsets.only(top: 8.0),
-            child: Text("Loading..."),
+            child: Text(
+              message,
+              style: TextStyle(fontSize: 16.0),
+            ),
           )
         ],
       ),
